@@ -27,7 +27,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -f "package.json"]; then
+          if [ -f "package.json" ]; then
             npm install
           fi
 
@@ -91,11 +91,11 @@ jobs:
 
       - name: Create Cloudflare Pages Project
         run: |
-          curl -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CF_ACCOUNT_ID }}/pages/projects" \
-          -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+          curl -X POST "https://api.cloudflare.com/client/v4/accounts/${{ secrets.CLOUDFLARE_ACCOUNT_ID }}/pages/projects" \
+          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
           -H "Content-Type: application/json" \
           --data '{
-            "name": "${{ env.CF_PROJECT_NAME }}",
+            "name": "${{ env.CLOUDFLARE_PROJECT_NAME }}",
             "github": {
               "owner": "${{ github.repository_owner }}",
               "repository": "${{ github.repository }}",
@@ -104,18 +104,18 @@ jobs:
             "production_branch": "main"
           }'
         env:
-          CF_PROJECT_NAME: dentalprocs
+          CLOUDFLARE_PROJECT_NAME: dentalprocs
 
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "3.80.4"
-          command: pages deploy ./dist --project-name=${{ env.CF_PROJECT_NAME }}
+          command: pages deploy ./dist --project-name=${{ env.CLOUDFLARE_PROJECT_NAME }}
         env:
-          CF_PROJECT_NAME: dentalprocs
+          CLOUDFLARE_PROJECT_NAME: dentalprocs
 
       - name: Get existing deploy comment ID
         if: github.event.pull_request.state == 'open'
