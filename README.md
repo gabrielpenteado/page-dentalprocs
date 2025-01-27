@@ -1,6 +1,6 @@
 # Dental Procs
 
-[**Dental Procs**](hhtps://dentalprocs.pages.dev) is a comprehensive analytics platform designed to help dental practices track, analyze, and optimize their procedures with ease. Built for modern dental professionals, Dental Procs provides actionable insights, performance tracking, and workflow optimization, all in one intuitive platform. Accessible via both web and mobile apps (Android), Dental Procs is the ideal solution for practices looking to boost efficiency and make data-driven decisions.
+[**Dental Procs**](https://dentalprocs.onrender.com) is a comprehensive analytics platform designed to help dental practices track, analyze, and optimize their procedures with ease. Built for modern dental professionals, Dental Procs provides actionable insights, performance tracking, and workflow optimization, all in one intuitive platform. Accessible via both web and mobile apps (Android), Dental Procs is the ideal solution for practices looking to boost efficiency and make data-driven decisions.
 
 ## Benefits
 
@@ -39,9 +39,9 @@ Dental Procs is built with modern technologies to provide a high-performance, sc
 
 <br>
 
-[**Teaser Video**](https://www.youtube.com/watch?reload=9&v=0X3PRdZceBo): Get an overview of Dental Procs.<br>
-[**Live Demo**](https://dentalprocs.vercel.app): Discover the features and see how it works.<br>
-[**GitHub Repository**](https://github.com/gabrielpenteado/dentalprocs): Explore the source code of the project.
+[**Web**](https://www.youtube.com/watch?reload=9&v=0X3PRdZceBo) | [**Mobile**](https://www.youtube.com/watch?v=BQxCSwrBjDE) : Get an overview of Dental Procs. <br>
+[**Live Demo**](https://dentalprocs.vercel.app) : Discover the features and see how it works.<br>
+[**GitHub Repository**](https://github.com/gabrielpenteado/dentalprocs) : Explore the source code of the project.
 
 <br>
 <br>

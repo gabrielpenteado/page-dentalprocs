@@ -10,7 +10,6 @@ function App() {
     const formData = new FormData(event.target as HTMLFormElement);
 
     formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
-    console.log();
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -19,13 +18,14 @@ function App() {
       });
 
       const data = await response.json();
+      //   console.log(data);
 
       if (data.success === true) {
         setResult("Thanks! You will be contacted soon.");
         setStatus("success");
         (event.target as HTMLFormElement).reset();
       } else {
-        console.log("Error", data);
+        // console.log("Error", data);
         setStatus("failed");
         setResult("Failed! Please try again.");
         (event.target as HTMLFormElement).reset();
@@ -72,7 +72,7 @@ function App() {
                   href="https://dentalprocs.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-emerald-500"
+                  className="group bg-gray-700 hover:bg-gray-600 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-emerald-500"
                 >
                   <svg
                     className="w-5 h-5"
@@ -93,7 +93,7 @@ function App() {
                   href="https://www.youtube.com/watch?v=0X3PRdZceBo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-red-500"
+                  className="group bg-gray-700 hover:bg-gray-600 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-emerald-500"
                 >
                   <svg
                     className="w-5 h-5"
@@ -108,7 +108,7 @@ function App() {
                   href="https://github.com/gabrielpenteado/dentalprocs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gray-700 hover:bg-gray-600 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-gray-500"
+                  className="group bg-gray-700 hover:bg-gray-600 text-white font-semibold py-4 px-6 rounded-xl text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:ring-1 hover:ring-emerald-500"
                 >
                   <svg
                     className="w-5 h-5"
@@ -218,18 +218,18 @@ function App() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {[
-              { name: "Vite", color: "text-purple-400" },
-              { name: "React", color: "text-blue-300" },
-              { name: "React Native", color: "text-blue-500" },
-              { name: "TypeScript", color: "text-blue-400" },
-              { name: "TailwindCSS", color: "text-teal-400" },
-              { name: "RadixUI", color: "text-violet-400" },
-              { name: "Node.js", color: "text-green-400" },
-              { name: "MySQL", color: "text-orange-400" },
-              { name: "Prisma", color: "text-indigo-400" },
-              { name: "Zod", color: "text-pink-400" },
-              { name: "Fastify", color: "text-red-400" },
-              { name: "ApexCharts", color: "text-yellow-400" },
+              { name: "Vite", color: "text-gray-300/75" },
+              { name: "React", color: "text-gray-300/75" },
+              { name: "React Native", color: "text-gray-300/75" },
+              { name: "TypeScript", color: "text-gray-300/75" },
+              { name: "TailwindCSS", color: "text-gray-300/75" },
+              { name: "RadixUI", color: "text-gray-300/75" },
+              { name: "Node.js", color: "text-gray-300/75" },
+              { name: "MySQL", color: "text-gray-300/75" },
+              { name: "Prisma", color: "text-gray-300/75" },
+              { name: "Zod", color: "text-gray-300/75" },
+              { name: "Fastify", color: "text-gray-300/75" },
+              { name: "ApexCharts", color: "text-gray-300/75" },
             ].map((tech) => (
               <div key={tech.name} className="tech-card">
                 <span className={`font-medium ${tech.color}`}>{tech.name}</span>
