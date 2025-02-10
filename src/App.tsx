@@ -46,12 +46,12 @@ function App() {
       <section className="bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="section-container">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1 text-center lg:text-left">
+            <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
               {/* <img
-                src="/logo.png"
-                alt="Dental Procs"
-                className="2xl:w-[200px] 2xl:h-[200px] w-[170px] h-[170px] mb-6 mx-auto lg:mx-0"
-              /> */}
+          src="/logo.png"
+          alt="Dental Procs"
+          className="2xl:w-[200px] 2xl:h-[200px] w-[170px] h-[170px] mb-6 mx-auto lg:mx-0"
+        /> */}
               <h1 className="text-4xl sm:text-5xl font-bold mb-6">
                 Monitor Your Dental Practice with{" "}
                 <span className="text-6xl text-emerald-400 lg:display: block">
@@ -64,8 +64,7 @@ function App() {
                 practices.
               </p>
               <p className="text-lg text-emerald-400 mb-12">
-                Available as a web application and mobile app for iOS and
-                Android
+                Available as Web and Mobile app.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto lg:mx-0">
                 <a
@@ -125,7 +124,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 order-1 lg:order-2">
               <img
                 width={800}
                 src="/dentalprocs.png"
